@@ -1,0 +1,22 @@
+
+(function($) {
+    
+    // document.ready
+    $(function() {
+        $('.button-toggle').children('a').on( 'click', function( e ) {
+            
+            $panel = $(this).siblings('div.button-toggle-panel');
+            $icon = $(this).children('i');
+            
+            if ( $panel.is(':visible') ) {
+                $icon.attr( 'class', $icon.data( 'classOpen' ) );
+            } else {
+                $icon.attr( 'class', $icon.data( 'classClose' ) );
+            }
+            
+            $panel.slideToggle(600);
+            return false;
+        });        
+    });
+    
+})(jQuery);

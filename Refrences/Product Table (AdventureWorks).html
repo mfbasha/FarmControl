@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="canonical" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx">
+    <title>Product Table (AdventureWorks)</title>
+
+
+
+
+
+
+
+<meta name="DCS.dcsuri" content="/en-us/library/ms124719(d=default,l=en-us,v=sql.100).aspx">
+
+<meta name="NormalizedUrl" content="https://technet.microsoft.com/en-us/library/ms124719(d=default,l=en-us,v=sql.100).aspx">
+
+<meta name="ms.normalizedurl" content="https://technet.microsoft.com/en-us/library/ms124719(d=default,l=en-us,v=sql.100).aspx">
+
+<meta name="VotingContextUrl" content="https://technet.microsoft.com/en-us/library/ms124719(d=default,l=en-us,v=sql.100).aspx">
+
+<meta name="MN" content="61C41DCE-9:33:15 AM">
+
+<meta name="Search.ShortId" content="ms124719">
+
+<meta name="ms.shortidmsdn" content="ms124719">
+
+<meta name="ms.locale" content="en-us">
+
+<meta name="ms.prodver" content="SQL.100">
+
+<meta name="ms.contentlang" content="EN">
+
+<meta name="ms.lang" content="EN">
+
+<meta name="ms.loc" content="US">
+
+<meta name="ms.sitever" content="2017.12.20.1">
+
+<meta name="ms.assetid" content="bb52cfe8-d9dd-44e2-bc10-ab5982ba41e2">
+
+<meta name="ms.auth" content="0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+        
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="./Product Table (AdventureWorks)_files/ai.0.js.download" async=""></script><script type="text/javascript" data-do-not-move="true">
+        //<![CDATA[
+        var AmbientContext = null;
+
+        (function(){
+            var root = (function(){return this;}).call(null);
+
+            var GetCookie = function(name){
+                var cookies = root.document.cookie ? root.document.cookie.split('; ') : [];
+                for (var i = 0; i < cookies.length; i++) {
+                    var pos = cookies[i].indexOf('=');
+                    if (name === root.decodeURIComponent(cookies[i].slice(0, pos)))
+                    {
+                        var cookie = cookies[i].slice(pos + 1).replace(/\+/g, ' ');
+                        cookie = root.decodeURIComponent(cookie);
+                        return cookie;
+                    }
+                }
+            };
+
+            var JsonDeserialize = function(content) {
+                return root.JSON && root.JSON.parse ? root.JSON.parse(content) : (new Function('return (' + content + ')'))();
+            };
+
+            try {
+                AmbientContext = GetCookie('AmbientContext');
+                AmbientContext = AmbientContext && JsonDeserialize(AmbientContext);
+            } catch(ex) {
+            } finally {
+                AmbientContext = AmbientContext || null;
+            }
+        })();
+        //]]>
+    </script>
+
+    <script type="text/javascript" src="./Product Table (AdventureWorks)_files/jquery-1.9.1.min.js.download" data-do-not-move="true" data-provides="jQuery"></script>
+    
+<link rel="stylesheet" type="text/css" href="./Product Table (AdventureWorks)_files/mscc-0.3.7.min.css"><link rel="stylesheet" type="text/css" href="./Product Table (AdventureWorks)_files/Combined.css"><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "https://i-technet.sec.s-msft.com", 
+	"js": "https://i2-technet.sec.s-msft.com", 
+	"css": "https://i-technet.sec.s-msft.com", 
+	"ttf": "https://i-technet.sec.s-msft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected">try {
+//
+
+        window.appInsightsId = 'c48d7639-e2ae-45e0-b536-c9b172c95e44';
+        //
+} finally { MTPS._injectNextScript_1 && MTPS._injectNextScript_1(); }</script><script class="mtps-injected" src="./Product Table (AdventureWorks)_files/Combined.js.download"></script><script type="text/javascript" async="" src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><link href="./Product Table (AdventureWorks)_files/PrintView.css" rel="stylesheet" type="text/css" media="print"><script type="text/javascript" src="./Product Table (AdventureWorks)_files/jsll-4.2.1.js.download"></script><meta name="ms.perf.timing" content=",,4,122,833,833,2052,2275,2063,2281,2281,2560,,,"><meta name="ms.env" content="production"><meta name="ms.sitesec" content="library"><meta name="ms.title" content="library;product table (adventureworks)"><script type="text/javascript" src="./Product Table (AdventureWorks)_files/ms.js.download"></script><script class="mtps-injected" src="./Product Table (AdventureWorks)_files/mscc-0.3.7.min.js.download"></script><script class="mtps-injected">try {
+var omnitureTracking = "false";
+} finally { MTPS._injectNextScript_4 && MTPS._injectNextScript_4(); }</script><script class="mtps-injected" src="./Product Table (AdventureWorks)_files/Combined.js(1).download"></script><script class="mtps-injected" src="./Product Table (AdventureWorks)_files/SearchBox.jss"></script><script class="mtps-injected" src="./Product Table (AdventureWorks)_files/Combined.js(2).download"></script><script async="" src="https://web.vortex.data.microsoft.com/collect/v1/t.js?ver=%272.1%27&amp;name=%27Ms.Webi.PageView%27&amp;time=%272018-01-10T17%3A33%3A19.311Z%27&amp;os=%27Windows%27&amp;appId=%27JS%3Atechnet.microsoft.com%27&amp;-ver=%271.0%27&amp;-impressionGuid=%27db9e00bd-096b-4e80-8e07-b592ac6f9470%27&amp;-pageName=%27library%27&amp;-uri=%27https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fms124719(v%3Dsql.100).aspx%27&amp;-referrerUri=%27https%3A%2F%2Fwww.google.com.eg%2F%27&amp;-resHeight=864&amp;-resWidth=1536&amp;-pageTags=%27%7B%22metaTags%22%3A%7B%22ms.normalizedurl%22%3A%22https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fms124719(d%3Ddefault%2Cl%3Den-us%2Cv%3Dsql.100).aspx%22%2C%22ms.shortidmsdn%22%3A%22ms124719%22%2C%22ms.locale%22%3A%22en-us%22%2C%22ms.prodver%22%3A%22SQL.100%22%2C%22ms.contentlang%22%3A%22EN%22%2C%22ms.lang%22%3A%22EN%22%2C%22ms.loc%22%3A%22US%22%2C%22ms.sitever%22%3A%222017.12.20.1%22%2C%22ms.assetid%22%3A%22bb52cfe8-d9dd-44e2-bc10-ab5982ba41e2%22%2C%22ms.auth%22%3A%220%22%2C%22ms.perf.timing%22%3A%22%2C%2C4%2C122%2C833%2C833%2C2052%2C2275%2C2063%2C2281%2C2281%2C2560%2C%2C%2C%22%2C%22ms.env%22%3A%22production%22%2C%22ms.sitesec%22%3A%22library%22%2C%22ms.title%22%3A%22library%3Bproduct%20table%20(adventureworks)%22%7D%7D%27&amp;-behavior=0&amp;*baseType=%27Ms.Content.PageView%27&amp;*cookieEnabled=true&amp;*cookies=%27MSFPC%3DID%3Db57580d7a9ee441eb1f4e78fba8ee714%26CS%3D2%26LV%3D201709%26V%3D1%3BANON%3DA%3DCF5CDA80A1142347E4B00299FFFFFFFF%26E%3D1442%26W%3D1%3B%27&amp;*isJs=true&amp;*title=%27Product%20Table%20(AdventureWorks)%27&amp;*isLoggedIn=false&amp;*flashInstalled=false&amp;ext-javascript-ver=%271.1%27&amp;ext-javascript-libVer=%274.2.1%27&amp;ext-javascript-domain=%27technet.microsoft.com%27&amp;ext-javascript-msfpc=%27ID%3Db57580d7a9ee441eb1f4e78fba8ee714%26CS%3D2%26LV%3D201709%26V%3D1%27&amp;ext-javascript-userConsent=false&amp;ext-user-localId=%27t%3A2E4663A436446D8D16A9695A324469AB%27&amp;$mscomCookies=false"></script><script class="mtps-injected">try {
+MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = 'Expand'; MTPS.LocalizedStrings.CollapseButtonTooltip = 'Collapse'; MTPS.LocalizedStrings.EnhancedExpandTooltip = 'Click to expand. Double-click to expand all.'; MTPS.LocalizedStrings.EnhancedCollapseTooltip = 'Click to collapse. Double-click to collapse all.'; MTPS.LocalizedStrings.ExpandAllButtonTooltip = 'Expand All'; MTPS.LocalizedStrings.CollapseAllButtonTooltip = 'Collapse All';
+} finally { MTPS._injectNextScript_8 && MTPS._injectNextScript_8(); }</script><script class="mtps-injected" src="./Product Table (AdventureWorks)_files/jquery.tmpl.min.js.download"></script><script class="mtps-injected" src="./Product Table (AdventureWorks)_files/Combined.js(3).download"></script><script src="./Product Table (AdventureWorks)_files/broker.js.download"></script><script class="mtps-injected">try {
+$(document).ready(function() {
+        try {
+            var token = $("#globalRequestVerification input[name='__RequestVerificationToken']").clone();
+            $("#siteFeedbackForm").append(token);
+        } catch(err) {
+            
+        }
+    });
+} finally { MTPS._injectNextScript_11 && MTPS._injectNextScript_11(); }</script></head>
+<body class="library Chrome">
+    <div id="page">
+
+        
+
+        
+    
+        
+        
+    <div id="ux-header" dir="ltr" class="ltr " ms.pgarea="header" data-device-type="desktop">
+        
+        
+            
+            
+        <div id="ux-banner">
+            <div id="msccBanner" dir="ltr" data-site-name="technet.microsoft.com" data-mscc-version="0.3.6" data-nver="aspnet-3.0.0" data-sver="0.1.2" class="cc-banner" role="alert"><div class="cc-container"><svg class="cc-icon cc-v-center" x="0px" y="0px" viewBox="0 0 44 44" height="30px" fill="none" stroke="currentColor"><circle cx="22" cy="22" r="20" stroke-width="2"></circle><line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line><line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line></svg> <span class="cc-v-center cc-text">This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to this use.</span> <a href="https://go.microsoft.com/fwlink/?linkid=845480" aria-label="Learn more about Microsoft&#39;s Cookie Policy" id="msccLearnMore" class="cc-link cc-v-center cc-float-right" data-mscc-ic="false">Learn more</a></div></div>
+        </div>
+
+        <div class="upperBand">
+            <div class="row1">
+                <div class="msLogoAndMegablade">
+                    <a class="msdnLogoImg" href="https://technet.microsoft.com/en-us" title="Technet home" ms.cmpgrp="mslogo">
+                        <div id="msft-logo" class="msft-logo"></div>
+                    </a><div class="GrayPipe"></div><div class="megabladeMenu" ms.cmpgrp="megablade">
+    
+        
+    
+    <div id="megabladeContainer" class="ltr">
+        <div id="megabladeContainerCenter">
+            <div id="megabladeMainMenu" tabindex="0" role="button" aria-label="technet" aria-expanded="false">TechNet</div>
+            <ul id="megabladeItems">
+                        <li data-value="hh326172" class="bladeItem bladeItemWithMenu">
+                            <a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Products</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Products</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/windows">Windows</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/library/bb625087.aspx">Windows Server</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/library/cc507089.aspx">System Center</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/microsoft-edge">Microsoft Edge</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/office">Office</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/en-us/office/dn788774">Office 365</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/en-us/office/dn788775">Exchange Server</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="https://msdn.microsoft.com/library/mt590198(v=sql.1)">SQL Server</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/office/dn788776">SharePoint Products</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/office/dn788773">Skype for Business</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/bb421517.aspx?wt.svl=more_centers_link">See all products »</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="hh880860" class="bladeItem bladeItemWithMenu">
+                            <a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">IT Resources</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Resources</h5>
+  <ul>
+    <li>
+      <a href="https://channel9.msdn.com/">Channel 9 Video</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/evalcenter/">Evaluation Center</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/bb291022">Learning Resources</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/dn440144">Microsoft Tech Companion App</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/dn550853" title="Microsoft Technical Communities">Microsoft Technical Communities</a>
+    </li>
+    <li>
+      <a href="https://mva.microsoft.com/?CR_CC=200157774">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/scriptcenter">Script Center</a>
+    </li>
+    <li>
+      <a href="https://blogs.technet.microsoft.com/serverandtools/">Server and Tools Blogs</a>
+    </li>
+    <li>
+      <a href="https://blogs.technet.microsoft.com/">TechNet Blogs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/cc543196">TechNet Flash Newsletter</a>
+    </li>
+    <li>
+      <a href="https://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/library/default.aspx">TechNet Library</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/magazine/default.aspx">TechNet Magazine</a>
+    </li>
+    <li>
+      <a href="https://social.technet.microsoft.com/wiki">TechNet Wiki</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/virtuallabs">Virtual Labs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Solutions</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/network">Networking</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/cloud/private-cloud">Cloud and Datacenter</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/security">Security</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx">Virtualization</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="hh371326" class="bladeItem bladeItemWithMenu">
+                            <a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Downloads</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Updates</h5>
+  <ul>
+    <li>
+      <a href="https://support.microsoft.com/en-us">Service Packs</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/security/bulletin">Security Bulletins</a>
+    </li>
+    <li>
+      <a href="https://support.microsoft.com/en-us/help/12373/windows-update-faq">Windows Update</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Trials</h5>
+  <ul>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview">Windows Server 2016</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-technical-preview">System Center 2016</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise">Windows 10 Enterprise</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016">SQL Server 2016</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/" title="See all trials">See all trials »</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Related Sites</h5>
+  <ul>
+    <li>
+      <a href="https://www.microsoft.com/en-us/download">Microsoft Download Center</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/">Microsoft Evaluation Center</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/download/driver.aspx?q=driver">Drivers</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="https://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="jj837158" class="bladeItem bladeItemWithMenu">
+                            <a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Training</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Training</h5>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/handsonlabs">Expert-led, virtual classes</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/training.aspx">Training Catalog</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/find-partner.aspx">Class Locator</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://mva.microsoft.com/">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://mva.microsoft.com/en-US/training-courses/windows-server-2012-training-technical-overview-8564?l=BpPnn410_6504984382">Free Windows Server 2012 courses</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://mva.microsoft.com/product-training/windows?CR_CC=200155697#!lang=1033" title="Free Windows 8 courses">Free Windows 8 courses</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/sql-training.aspx">SQL Server training</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/on-demand-online-courses.aspx">Microsoft Official Courses On-Demand</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Certifications</h5>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/certification-overview.aspx">Certification overview</a>
+    </li>
+    <li>
+      <a onclick="window.open(this.href);return false;" onkeypress="window.open(this.href);return false;" href="https://www.microsoft.com/en-us/learning/offers.aspx?intcmp=lexhpoffersmenubutton">Special offers</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-cloud-platform-infrastructure.aspx" title="MCSE Cloud Platform and Infrastructure">MCSE Cloud Platform and Infrastructure</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-mobility-certification.aspx">MCSE: Mobility</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-data-management-analytics.aspx">MCSE: Data Management and Analytics</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-productivity-certification.aspx">MCSE Productivity</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Other resources</h5>
+  <ul>
+    <li>
+      <a target="_blank" href="https://events.microsoft.com/">Microsoft Events</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/offers.aspx">Exam Replay</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://borntolearn.mslearn.net/b/?Redirected=true">Born To Learn blog</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.technicalcommunity.com/default.aspx">Find technical communities in your area</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://azure.microsoft.com/en-us/training/">Azure training</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.mindhub.com/category-s/437.htm">Official Practice Tests</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="hh371327" class="bladeItem bladeItemWithMenu">
+                            <a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Support</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Support options</h5>
+  <ul>
+    <li>
+      <a href="https://support.microsoft.com/gp/contactus81?Audience=Commercial">For business</a>
+    </li>
+    <li>
+      <a href="https://msdn.microsoft.com/hh361695">For developers</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/ms772425">For IT professionals</a>
+    </li>
+    <li>
+      <a href="https://support.microsoft.com/en-us/assistedsupportproducts">For technical support</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/microsoftservices/support.aspx">Support offerings</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>More support</h5>
+  <ul>
+    <li>
+      <a href="https://premier.microsoft.com/">Microsoft Premier Online</a>
+    </li>
+    <li>
+      <a href="https://social.technet.microsoft.com/forums/">TechNet Forums</a>
+    </li>
+    <li>
+      <a href="https://social.msdn.microsoft.com/forums/">MSDN Forums</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/security/bulletin">Security Bulletins &amp; Advisories</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Not an IT pro?</h5>
+  <ul>
+    <li>
+      <a href="https://support.microsoft.com/">Microsoft Customer Support</a>
+    </li>
+    <li>
+      <a href="https://answers.microsoft.com/en-us">Microsoft Community Forums</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+            </ul>
+        </div>
+    </div>
+    
+
+</div>
+                </div>
+
+                <div class="controls" ms.cmpgrp="aux nav">
+                    <div id="setting-menu">
+                        <div class="mobile-setting-icon"></div>
+                    </div>
+                    <div class="controlsInternal">
+                        
+    <form class="selectLocale" id="selectLocaleForm" action="https://technet.microsoft.com/en-us/SelectLocale">
+        <input type="hidden" name="fromPage" value="https%3a%2f%2ftechnet.microsoft.com%2fen-us%2flibrary%2fms124719(v%3dsql.100).aspx">
+        <a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#" onclick="$(&#39;#selectLocaleForm&#39;).submit();return false;" title="Change your language">United States (English)</a>
+    </form>
+
+
+                        <a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=13&amp;ct=1515605595&amp;rver=6.7.6640.0&amp;wp=mcmbi&amp;wlcxt=technet%24technet%24technet&amp;wreply=https%3a%2f%2ftechnet.microsoft.com%2fen-us%2flibrary%2fms124719%2528v%3dsql.100%2529.aspx&amp;lc=1033&amp;id=254354&amp;mkt=en-us">Sign in</a>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="row2">
+                <div id="gripAndBrandLogo">
+                    <div id="grip-menu">
+                        <div id="grip" class="menu-icon"></div>
+                    </div>
+                    <div class="brandLogo" ms.cmpgrp="brandlogo">
+                        <a href="https://technet.microsoft.com/" title="Microsoft TechNet"><img alt="Microsoft TechNet" src="./Product Table (AdventureWorks)_files/BrandLogoTechNetNew.png"></a>
+                    </div>
+                </div>
+                <div id="drawer">
+
+                </div>
+                <div id="search-menu">
+                    <div class="mobile-search-icon"></div>
+                </div>
+                
+
+    <div class="SearchBox" ms.cmpgrp="aux nav" role="search">
+        <form id="HeaderSearchForm" name="HeaderSearchForm" method="get" onsubmit="return Epx.Controls.SearchBox.searchBoxOnSubmit(this);"><p role="alert" style="height: 1px;width: 1px;overflow: hidden;position: absolute;"></p>
+            <input id="HeaderSearchTextBox" name="query" type="text" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(event, this.title)" onblur="Epx.Controls.SearchBox.watermarkBlur(event, this.title)" aria-labelledby="HeaderSearchButton" autocomplete="off" data-searchtype="searchbox" role="combobox" aria-label="Search Input Box" aria-autocomplete="both" aria-owns="MSDNSearchAutoCompleteList" aria-live="polite" placeholder="Search TechNet with Bing" title="Search TechNet with Bing">
+            <button id="HeaderSearchButton" value="" type="submit" class="header-search-button" ms.title="search" data-searchtype="icon" title="Search TechNet with Bing"></button>
+        <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(112, 112, 112); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 14px;"><div id="SuggestionContainer"><ul data-searchtype="search dropdown" id="MSDNSearchAutoCompleteList" role="listbox" aria-controls="HeaderSearchTextBox" style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></form>
+
+        
+        
+
+    </div>
+
+                <div class="clear"></div>
+             </div>
+
+            <div class="row3">
+
+            </div>
+        </div>
+        <div class="lowerBand">
+            <div class="ux-nav" role="navigation" aria-label="header toc" ms.cmpgrp="main nav">
+                <div class="TocNavigation">
+   
+   <div class="toclevel1">
+          <a class="normal" href="https://technet.microsoft.com/" title="Home">Home</a>
+          <a class="active" href="https://technet.microsoft.com/library/" title="Library">Library</a>
+          <a class="normal" href="https://social.technet.microsoft.com/wiki" title="Wiki">Wiki</a>
+          <a class="normal" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" title="Learn">Learn</a>
+          <a class="normal" href="https://gallery.technet.microsoft.com/" title="Gallery">Gallery</a>
+          <a class="normal" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" title="Downloads">Downloads</a>
+          <a class="normal" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" title="Support">Support</a>
+          <a class="normal" href="https://social.technet.microsoft.com/forums/en-us/home" title="Forums">Forums</a>
+          <a class="normal" href="https://blogs.technet.microsoft.com/" title="Blogs">Blogs</a>
+
+    </div>
+  
+</div>
+            </div>
+        </div>
+    </div>
+
+<div id="jumpInfo" style="display: none">We’re sorry. The content you requested has been removed. You’ll be auto redirected in 1 second.</div>
+
+
+
+
+<link type="text/css" rel="stylesheet">
+<link type="text/css" rel="stylesheet">
+
+
+    <div id="breadcrumbs" ms.pgarea="body" ms.cmpgrp="breadcrumbs">
+        <div id="breadcrumbDesktop" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://technet.microsoft.com/en-us/library/bb510407(v=sql.100).aspx" title="Samples"></a></span>
+                        <span><a href="https://technet.microsoft.com/en-us/library/ms124501(v=sql.100).aspx" title="AdventureWorks Sample Databases"><span>AdventureWorks Sample Databases</span></a></span>
+                        <span><a href="https://technet.microsoft.com/en-us/library/ms124659(v=sql.100).aspx" title="AdventureWorks Sample OLTP Database"><span>AdventureWorks Sample OLTP Database</span></a></span>
+                        <span class="breadcrumbDropSmall">
+                            <a id="breadcrumbDropDownButton" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#" targethref="https://technet.microsoft.com/en-us/library/ms124659(v=sql.100).aspx" title="AdventureWorks Data Dictionary" role="button" aria-expanded="false"><span>AdventureWorks Data Dictionary</span></a>
+                        </span>
+        </div>
+        <div id="breadcrumbDropDownMenu" style="display: none;"></div>
+
+        <div id="breadcrumbTablet" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://technet.microsoft.com/en-us/library/ms124659(v=sql.100).aspx" title="AdventureWorks Sample OLTP Database"></a></span>
+                    <span><a href="https://technet.microsoft.com/en-us/library/ms124438(v=sql.100).aspx" title="AdventureWorks Data Dictionary"><span>AdventureWorks Data Dictionary</span></a></span>
+                <span class="breadcrumbDropSmall"><a id="tocDropDownButton" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#" title="Product Table (AdventureWorks)" role="button" aria-expanded="false"><span>Product Table (AdventureWorks)</span></a></span>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://technet.microsoft.com/en-us/library/ms124719(d=printer,v=sql.100).aspx" rel="nofollow"><ins class="print"></ins>Print </a>
+            <a id="isd_printABook" href="https://technet.microsoft.com/en-us/library/export/help/?returnurl=%2fen-us%2flibrary%2fms124719(v%3dsql.100).aspx">
+                <ins class="export"></ins>Export (<span class="count">0</span>)
+            </a>
+        </div></div>
+        <div id="tocDropDownMenu" style="display: none;"></div>
+        <div id="breadcrumbMobile" class="breadCrumb">
+                <span class="breadcrumbEllipsis"><a href="https://technet.microsoft.com/en-us/library/ms124438(v=sql.100).aspx" title="AdventureWorks Data Dictionary"></a></span>
+            <span class="breadcrumbDropSmall"><a id="tocPopupButton" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#" title="Product Table (AdventureWorks)" role="button" aria-expanded="false"><span>Product Table (AdventureWorks)</span></a></span>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://technet.microsoft.com/en-us/library/ms124719(d=printer,v=sql.100).aspx" rel="nofollow"><ins class="print"></ins>Print </a>
+            <a id="isd_printABook" href="https://technet.microsoft.com/en-us/library/export/help/?returnurl=%2fen-us%2flibrary%2fms124719(v%3dsql.100).aspx">
+                <ins class="export"></ins>Export (<span class="count">0</span>)
+            </a>
+        </div></div>
+    </div>
+    <div id="tocPopupMenu" style="display: none;">
+        <div id="tocPopMenuClose" class="tocCloseLarge" role="button" aria-label="Close Popup Menu" tabindex="0"></div>
+        <div id="tocTitle">Product Table (AdventureWorks)</div>        
+    </div>
+
+    
+
+
+        <div id="body" ms.pgarea="body" class="">
+            <span id="tabletView_large"></span>
+            <span id="tabletView_small"></span>
+            <span id="mobileView"></span>
+            
+
+
+
+
+    <div id="leftNav" ms.cmpgrp="left toc" role="navigation" aria-label="left toc" style="height: auto;">
+
+    
+
+
+<div id="tocnav" class="ArchiveV2">
+    <div class="tocunselected">
+        <div id="tocExpandArea" style="display: block;">
+            <span class="toc_empty"></span>
+            <span id="tocExpandButton"><a href="javascript:void(0)" aria-label="expand sibling toc" role="button"></a></span>
+        </div>
+        <div id="tocExpand"><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124900(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Address Table (AdventureWorks)" data-pmcucidx="0" ms.cmpgrp="table of contents" ms.cmpnm="address table (adventureworks);1" ms.index="0">Address Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124753(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="AddressType Table (AdventureWorks)" data-pmcucidx="1" ms.cmpgrp="table of contents" ms.cmpnm="addresstype table (adventureworks);1" ms.index="1">AddressType Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124736(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="AWBuildVersion Table (AdventureWorks)" data-pmcucidx="2" ms.cmpgrp="table of contents" ms.cmpnm="awbuildversion table (adventureworks);1" ms.index="2">AWBuildVersion Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124597(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="BillOfMaterials Table (AdventureWorks)" data-pmcucidx="3" ms.cmpgrp="table of contents" ms.cmpnm="billofmaterials table (adventureworks);1" ms.index="3">BillOfMaterials Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124714(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Contact Table (AdventureWorks)" data-pmcucidx="4" ms.cmpgrp="table of contents" ms.cmpnm="contact table (adventureworks);1" ms.index="4">Contact Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124463(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ContactCreditCard Table (AdventureWorks)" data-pmcucidx="5" ms.cmpgrp="table of contents" ms.cmpnm="contactcreditcard table (adventureworks);1" ms.index="5">ContactCreditCard Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124759(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ContactType Table (AdventureWorks)" data-pmcucidx="6" ms.cmpgrp="table of contents" ms.cmpnm="contacttype table (adventureworks);1" ms.index="6">ContactType Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124778(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CountryRegionCurrency Table (AdventureWorks)" data-pmcucidx="7" ms.cmpgrp="table of contents" ms.cmpnm="countryregioncurrency table (adventureworks);1" ms.index="7">CountryRegionCurrency Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124730(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CountryRegion Table (AdventureWorks)" data-pmcucidx="8" ms.cmpgrp="table of contents" ms.cmpnm="countryregion table (adventureworks);1" ms.index="8">CountryRegion Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124632(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CreditCard Table (AdventureWorks)" data-pmcucidx="9" ms.cmpgrp="table of contents" ms.cmpnm="creditcard table (adventureworks);1" ms.index="9">CreditCard Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124602(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Culture Table (AdventureWorks)" data-pmcucidx="10" ms.cmpgrp="table of contents" ms.cmpnm="culture table (adventureworks);1" ms.index="10">Culture Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124861(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Currency Table (AdventureWorks)" data-pmcucidx="11" ms.cmpgrp="table of contents" ms.cmpnm="currency table (adventureworks);1" ms.index="11">Currency Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124784(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CurrencyRate Table (AdventureWorks)" data-pmcucidx="12" ms.cmpgrp="table of contents" ms.cmpnm="currencyrate table (adventureworks);1" ms.index="12">CurrencyRate Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124893(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Customer Table (AdventureWorks)" data-pmcucidx="13" ms.cmpgrp="table of contents" ms.cmpnm="customer table (adventureworks);1" ms.index="13">Customer Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124906(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CustomerAddress Table (AdventureWorks)" data-pmcucidx="14" ms.cmpgrp="table of contents" ms.cmpnm="customeraddress table (adventureworks);1" ms.index="14">CustomerAddress Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124872(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="DatabaseLog Table (AdventureWorks)" data-pmcucidx="15" ms.cmpgrp="table of contents" ms.cmpnm="databaselog table (adventureworks);1" ms.index="15">DatabaseLog Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124543(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Department Table (AdventureWorks)" data-pmcucidx="16" ms.cmpgrp="table of contents" ms.cmpnm="department table (adventureworks);1" ms.index="16">Department Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124492(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Document Table (AdventureWorks)" data-pmcucidx="17" ms.cmpgrp="table of contents" ms.cmpnm="document table (adventureworks);1" ms.index="17">Document Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124432(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Employee Table (AdventureWorks)" data-pmcucidx="18" ms.cmpgrp="table of contents" ms.cmpnm="employee table (adventureworks);1" ms.index="18">Employee Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124671(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EmployeeAddress Table (AdventureWorks)" data-pmcucidx="19" ms.cmpgrp="table of contents" ms.cmpnm="employeeaddress table (adventureworks);1" ms.index="19">EmployeeAddress Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124551(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EmployeeDepartmentHistory Table (AdventureWorks)" data-pmcucidx="20" ms.cmpgrp="table of contents" ms.cmpnm="employeedepartmenthistory table (adventureworks);1" ms.index="20">EmployeeDepartmentHistory Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124708(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EmployeePayHistory Table (AdventureWorks)" data-pmcucidx="21" ms.cmpgrp="table of contents" ms.cmpnm="employeepayhistory table (adventureworks);1" ms.index="21">EmployeePayHistory Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124689(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ErrorLog Table (AdventureWorks)" data-pmcucidx="22" ms.cmpgrp="table of contents" ms.cmpnm="errorlog table (adventureworks);1" ms.index="22">ErrorLog Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124603(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Illustration Table (AdventureWorks)" data-pmcucidx="23" ms.cmpgrp="table of contents" ms.cmpnm="illustration table (adventureworks);1" ms.index="23">Illustration Table (AdventureWorks)</a>                </div></div>
+    <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124643(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Individual Table (AdventureWorks)" data-pmcucidx="24" ms.cmpgrp="table of contents" ms.cmpnm="individual table (adventureworks);1" ms.index="0">Individual Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124917(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="JobCandidate Table (AdventureWorks)" data-pmcucidx="25" ms.cmpgrp="table of contents" ms.cmpnm="jobcandidate table (adventureworks);1" ms.index="1">JobCandidate Table (AdventureWorks)</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124746(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Location Table (AdventureWorks)" data-pmcucidx="26" ms.cmpgrp="table of contents" ms.cmpnm="location table (adventureworks);1" ms.index="2">Location Table (AdventureWorks)</a>                </div></div>
+    <div class="tocselected"><div class="toclevel current" data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Product Table (AdventureWorks)" data-pmcucidx="27" ms.cmpgrp="table of contents" ms.cmpnm="product table (adventureworks);1" ms.index="0">Product Table (AdventureWorks)</a>                </div><div class="tocPadding"></div></div>
+    <div class="tocunselected">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124760(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductCategory Table (AdventureWorks)" data-pmcucidx="28" ms.cmpgrp="table of contents" ms.cmpnm="productcategory table (adventureworks);1" ms.index="0">ProductCategory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124770(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductCostHistory Table (AdventureWorks)" data-pmcucidx="29" ms.cmpgrp="table of contents" ms.cmpnm="productcosthistory table (adventureworks);1" ms.index="1">ProductCostHistory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124766(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductDescription Table (AdventureWorks)" data-pmcucidx="30" ms.cmpgrp="table of contents" ms.cmpnm="productdescription table (adventureworks);1" ms.index="2">ProductDescription Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124729(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductDocument Table (AdventureWorks)" data-pmcucidx="31" ms.cmpgrp="table of contents" ms.cmpnm="productdocument table (adventureworks);1" ms.index="3">ProductDocument Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124455(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductInventory Table (AdventureWorks)" data-pmcucidx="32" ms.cmpgrp="table of contents" ms.cmpnm="productinventory table (adventureworks);1" ms.index="4">ProductInventory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124609(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductListPriceHistory Table (AdventureWorks)" data-pmcucidx="33" ms.cmpgrp="table of contents" ms.cmpnm="productlistpricehistory table (adventureworks);1" ms.index="5">ProductListPriceHistory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124873(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductModel Table (AdventureWorks)" data-pmcucidx="34" ms.cmpgrp="table of contents" ms.cmpnm="productmodel table (adventureworks);1" ms.index="6">ProductModel Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124707(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductModelIllustration Table (AdventureWorks)" data-pmcucidx="35" ms.cmpgrp="table of contents" ms.cmpnm="productmodelillustration table (adventureworks);1" ms.index="7">ProductModelIllustration Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124801(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductModelProductDescriptionCulture Table (AdventureWorks)" data-pmcucidx="36" ms.cmpgrp="table of contents" ms.cmpnm="productmodelproductdescriptionculture table (adventureworks);1" ms.index="8">ProductModelProductDescriptionCulture Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124678(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductPhoto Table (AdventureWorks)" data-pmcucidx="37" ms.cmpgrp="table of contents" ms.cmpnm="productphoto table (adventureworks);1" ms.index="9">ProductPhoto Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124665(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductProductPhoto Table (AdventureWorks)" data-pmcucidx="38" ms.cmpgrp="table of contents" ms.cmpnm="productproductphoto table (adventureworks);1" ms.index="10">ProductProductPhoto Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124590(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductReview Table (AdventureWorks)" data-pmcucidx="39" ms.cmpgrp="table of contents" ms.cmpnm="productreview table (adventureworks);1" ms.index="11">ProductReview Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124630(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductSubcategory Table (AdventureWorks)" data-pmcucidx="40" ms.cmpgrp="table of contents" ms.cmpnm="productsubcategory table (adventureworks);1" ms.index="12">ProductSubcategory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124576(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ProductVendor Table (AdventureWorks)" data-pmcucidx="41" ms.cmpgrp="table of contents" ms.cmpnm="productvendor table (adventureworks);1" ms.index="13">ProductVendor Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124638(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="PurchaseOrderDetail Table (AdventureWorks)" data-pmcucidx="42" ms.cmpgrp="table of contents" ms.cmpnm="purchaseorderdetail table (adventureworks);1" ms.index="14">PurchaseOrderDetail Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124469(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="PurchaseOrderHeader Table (AdventureWorks)" data-pmcucidx="43" ms.cmpgrp="table of contents" ms.cmpnm="purchaseorderheader table (adventureworks);1" ms.index="15">PurchaseOrderHeader Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124498(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesOrderDetail Table (AdventureWorks)" data-pmcucidx="44" ms.cmpgrp="table of contents" ms.cmpnm="salesorderdetail table (adventureworks);1" ms.index="16">SalesOrderDetail Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124879(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesOrderHeader Table (AdventureWorks)" data-pmcucidx="45" ms.cmpgrp="table of contents" ms.cmpnm="salesorderheader table (adventureworks);1" ms.index="17">SalesOrderHeader Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124510(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesOrderHeaderSalesReason Table (AdventureWorks)" data-pmcucidx="46" ms.cmpgrp="table of contents" ms.cmpnm="salesorderheadersalesreason table (adventureworks);1" ms.index="18">SalesOrderHeaderSalesReason Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124726(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesPerson Table (AdventureWorks)" data-pmcucidx="47" ms.cmpgrp="table of contents" ms.cmpnm="salesperson table (adventureworks);1" ms.index="19">SalesPerson Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124771(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesPersonQuotaHistory Table (AdventureWorks)" data-pmcucidx="48" ms.cmpgrp="table of contents" ms.cmpnm="salespersonquotahistory table (adventureworks);1" ms.index="20">SalesPersonQuotaHistory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124560(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesReason Table (AdventureWorks)" data-pmcucidx="49" ms.cmpgrp="table of contents" ms.cmpnm="salesreason table (adventureworks);1" ms.index="21">SalesReason Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124544(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesTaxRate Table (AdventureWorks)" data-pmcucidx="50" ms.cmpgrp="table of contents" ms.cmpnm="salestaxrate table (adventureworks);1" ms.index="22">SalesTaxRate Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124658(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesTerritory Table (AdventureWorks)" data-pmcucidx="51" ms.cmpgrp="table of contents" ms.cmpnm="salesterritory table (adventureworks);1" ms.index="23">SalesTerritory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124577(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SalesTerritoryHistory Table (AdventureWorks)" data-pmcucidx="52" ms.cmpgrp="table of contents" ms.cmpnm="salesterritoryhistory table (adventureworks);1" ms.index="24">SalesTerritoryHistory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124845(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ScrapReason Table (AdventureWorks)" data-pmcucidx="53" ms.cmpgrp="table of contents" ms.cmpnm="scrapreason table (adventureworks);1" ms.index="25">ScrapReason Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124800(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Shift Table (AdventureWorks)" data-pmcucidx="54" ms.cmpgrp="table of contents" ms.cmpnm="shift table (adventureworks);1" ms.index="26">Shift Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124591(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ShipMethod Table (AdventureWorks)" data-pmcucidx="55" ms.cmpgrp="table of contents" ms.cmpnm="shipmethod table (adventureworks);1" ms.index="27">ShipMethod Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124720(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ShoppingCartItem Table (AdventureWorks)" data-pmcucidx="56" ms.cmpgrp="table of contents" ms.cmpnm="shoppingcartitem table (adventureworks);1" ms.index="28">ShoppingCartItem Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124485(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SpecialOffer Table (AdventureWorks)" data-pmcucidx="57" ms.cmpgrp="table of contents" ms.cmpnm="specialoffer table (adventureworks);1" ms.index="29">SpecialOffer Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124918(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SpecialOfferProduct Table (AdventureWorks)" data-pmcucidx="58" ms.cmpgrp="table of contents" ms.cmpnm="specialofferproduct table (adventureworks);1" ms.index="30">SpecialOfferProduct Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124550(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="StateProvince Table (AdventureWorks)" data-pmcucidx="59" ms.cmpgrp="table of contents" ms.cmpnm="stateprovince table (adventureworks);1" ms.index="31">StateProvince Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124477(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Store Table (AdventureWorks)" data-pmcucidx="60" ms.cmpgrp="table of contents" ms.cmpnm="store table (adventureworks);1" ms.index="32">Store Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124615(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="StoreContact Table (AdventureWorks)" data-pmcucidx="61" ms.cmpgrp="table of contents" ms.cmpnm="storecontact table (adventureworks);1" ms.index="33">StoreContact Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124844(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="TransactionHistory Table (AdventureWorks)" data-pmcucidx="62" ms.cmpgrp="table of contents" ms.cmpnm="transactionhistory table (adventureworks);1" ms.index="34">TransactionHistory Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124470(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="TransactionHistoryArchive Table (AdventureWorks)" data-pmcucidx="63" ms.cmpgrp="table of contents" ms.cmpnm="transactionhistoryarchive table (adventureworks);1" ms.index="35">TransactionHistoryArchive Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124907(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="UnitMeasure Table (AdventureWorks)" data-pmcucidx="64" ms.cmpgrp="table of contents" ms.cmpnm="unitmeasure table (adventureworks);1" ms.index="36">UnitMeasure Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124653(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Vendor Table (AdventureWorks)" data-pmcucidx="65" ms.cmpgrp="table of contents" ms.cmpnm="vendor table (adventureworks);1" ms.index="37">Vendor Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124913(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="VendorAddress Table (AdventureWorks)" data-pmcucidx="66" ms.cmpgrp="table of contents" ms.cmpnm="vendoraddress table (adventureworks);1" ms.index="38">VendorAddress Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124484(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="VendorContact Table (AdventureWorks)" data-pmcucidx="67" ms.cmpgrp="table of contents" ms.cmpnm="vendorcontact table (adventureworks);1" ms.index="39">VendorContact Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124622(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="WorkOrder Table (AdventureWorks)" data-pmcucidx="68" ms.cmpgrp="table of contents" ms.cmpnm="workorder table (adventureworks);1" ms.index="40">WorkOrder Table (AdventureWorks)</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/ms124747(v=sql.100).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="WorkOrderRouting Table (AdventureWorks)" data-pmcucidx="69" ms.cmpgrp="table of contents" ms.cmpnm="workorderrouting table (adventureworks);1" ms.index="41">WorkOrderRouting Table (AdventureWorks)</a>                </div>
+    </div>
+    <a id="tocMenuToggler" href="javascript:void(0)" role="button">
+        <span id="tocMenuTogglerIcon" class="tocMenuCollapse" role="button" aria-expanded="true" aria-label="Table of contents menu"></span>
+        <div id="tocMenuTogglerLabel">TOC</div>
+    </a>
+</div>            <div style="display:none">
+                <div id="CollapseLocalizeString">Collapse the table of content</div>
+                <div id="ExpandLocalizeString">Expand the table of content</div>
+            </div>
+        <div>
+            <a id="isd_archiveControlResponsive" style="display:none;" href="javascript:void(0)" role="button" aria-label="Hide Archived Versions" data-include-archive="Show Archived Versions" data-exclude-archive="Hide Archived Versions">
+            </a>
+            <div id="isd_archiveInstrument" style="display:none">This documentation is archived and is not being maintained.</div>
+        </div>
+    </div>
+     <div id="content" class="content" ms.cmpgrp="content body" role="main">
+
+
+
+
+
+
+
+
+    
+    <div id="archiveDisclaimerText" style="display:none">This documentation is archived and is not being maintained.</div>
+
+
+
+
+<div class="topic" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">Product Table (AdventureWorks)</h1>
+  
+  <div id="mainSection">
+    <div id="mainBody"> <p></p> <div class="introduction"><p>Contains the products sold or used in the manufacturing of sold products.</p></div><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Product Table Definition</span></a><div id="Anchor_0" class="LW_CollapsibleArea_Anchor_Div active"><a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></h2><div class="sectionblock"><a id="sectionToggle0"></a><p>The <strong>Product</strong> table is contained in the <strong>Production</strong> schema.</p><div class="caption"></div><div class="tableSection"><div class="contentTableWrapper"><table responsive="true" summary="table"><tbody><tr responsive="true"><th scope="col"><p>Column</p></th><th scope="col"><p>Data type</p></th><th scope="col"><p>Nullability</p></th><th scope="col"><p>Description</p></th></tr><tr><td data-th="Column"><p><strong>ProductID</strong></p></td><td data-th="Data type"><p><span><span class="input">int</span></span></p></td><td data-th="Nullability"><p>Not null</p></td><td data-th="Description"><p>Primary key for <strong>Product</strong> rows.</p></td></tr><tr><td data-th="Column"><p><strong>Name</strong></p></td><td data-th="Data type"><p><strong>Name</strong> (user-defined type) </p><p><span><span class="input">nvarchar(50)</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Name of the product.</p></td></tr><tr><td data-th="Column"><p><strong>ProductNumber</strong></p></td><td data-th="Data type"><p><span><span class="input">nvarchar(25)</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Unique product identification number.</p></td></tr><tr><td data-th="Column"><p><strong>MakeFlag</strong></p></td><td data-th="Data type"><p><strong>Flag</strong> (user-defined type) </p><p><span><span class="input">bit</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>0 = Product is purchased.</p><p>1 = Product is manufactured in-house.</p></td></tr><tr><td data-th="Column"><p><strong>FinishedGoodsFlag</strong></p></td><td data-th="Data type"><p><strong>Flag</strong> (user-defined type) </p><p><span><span class="input">bit</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>0 = Product is not a salable item.</p><p>1 = Product is salable.</p></td></tr><tr><td data-th="Column"><p><strong>Color</strong></p></td><td data-th="Data type"><p><span><span class="input">nvarchar(15)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Product color.</p></td></tr><tr><td data-th="Column"><p><strong>SafetyStockLevel</strong></p></td><td data-th="Data type"><p><span><span class="input">smallint</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Minimum inventory quantity. </p></td></tr><tr><td data-th="Column"><p><strong>ReorderPoint</strong></p></td><td data-th="Data type"><p><span><span class="input">smallint</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Inventory level that triggers a purchase order or work order. </p></td></tr><tr><td data-th="Column"><p><strong>StandardCost</strong></p></td><td data-th="Data type"><p><span><span class="input">money</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Standard cost of the product.</p></td></tr><tr><td data-th="Column"><p><strong>ListPrice</strong></p></td><td data-th="Data type"><p><span><span class="input">money</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Selling price.</p></td></tr><tr><td data-th="Column"><p><strong>Size</strong></p></td><td data-th="Data type"><p><span><span class="input">nvarchar(5)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Product size.</p></td></tr><tr><td data-th="Column"><p><strong>SizeUnitMeasureCode</strong></p></td><td data-th="Data type"><p><span><span class="input">nchar(3)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Unit of measure for <strong>Size</strong> column.</p></td></tr><tr><td data-th="Column"><p><strong>WeightUnitMeasureCode</strong></p></td><td data-th="Data type"><p><span><span class="input">nchar(3)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Unit of measure for Weight column.</p></td></tr><tr><td data-th="Column"><p><strong>Weight</strong></p></td><td data-th="Data type"><p><span><span class="input">decimal (8,2)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Product weight.</p></td></tr><tr><td data-th="Column"><p><strong>DaysToManufacture</strong></p></td><td data-th="Data type"><p><span><span class="input">int</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Number of days required to manufacture the product.</p></td></tr><tr><td data-th="Column"><p><strong>ProductLine</strong></p></td><td data-th="Data type"><p><span><span class="input">nchar(2)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>R = Road </p><p>M = Mountain</p><p>T = Touring</p><p>S = Standard</p></td></tr><tr><td data-th="Column"><p><strong>Class</strong></p></td><td data-th="Data type"><p><span><span class="input">nchar(2)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>H = High</p><p>M = Medium</p><p>L = Low</p></td></tr><tr><td data-th="Column"><p><strong>Style</strong></p></td><td data-th="Data type"><p><span><span class="input">nchar(2)</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>W = Women's</p><p>M = Men's</p><p>U = Universal</p></td></tr><tr><td data-th="Column"><p><strong>ProductSubcategoryID</strong></p></td><td data-th="Data type"><p><span><span class="input">smallint</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Product is a member of this product subcategory. Foreign key to <strong>ProductSubCategory.ProductSubCategoryID</strong>. </p></td></tr><tr><td data-th="Column"><p><strong>ProductModelID</strong></p></td><td data-th="Data type"><p><span><span class="input">int</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Product is a member of this product model. Foreign key to <strong>ProductModel.ProductModelID</strong>.</p></td></tr><tr><td data-th="Column"><p><strong>SellStartDate</strong></p></td><td data-th="Data type"><p><span><span class="input">datetime</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Date the product was available for sale.</p></td></tr><tr><td data-th="Column"><p><strong>SellEndDate</strong></p></td><td data-th="Data type"><p><span><span class="input">datetime</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Date the product was no longer available for sale.</p></td></tr><tr><td data-th="Column"><p><strong>DiscontinuedDate</strong></p></td><td data-th="Data type"><p><span><span class="input">datetime</span></span></p></td><td data-th="Nullability"><p>null </p></td><td data-th="Description"><p>Date the product was discontinued.</p></td></tr><tr><td data-th="Column"><p><strong>rowguid</strong></p></td><td data-th="Data type"><p><span><span class="input">uniqueidentifier</span></span> ROWGUIDCOL</p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>ROWGUIDCOL number uniquely identifying the row. Used to support a merge replication sample.</p></td></tr><tr><td data-th="Column"><p><strong>ModifiedDate</strong></p></td><td data-th="Data type"><p><span><span class="input">datetime</span></span></p></td><td data-th="Nullability"><p>Not null </p></td><td data-th="Description"><p>Date and time the row was last updated.</p></td></tr></tbody></table></div></div></div></div><div><h2 class="LW_CollapsibleArea_TitleDiv"><div><a class="LW_CollapsibleArea_TitleAhref" title="" role="heading"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">See Also</span></a><div id="Anchor_1" class="LW_CollapsibleArea_Anchor_Div"><a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a></div><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></h2><div class="sectionblock"><a id="seeAlsoToggle"></a><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124597(v=sql.100).aspx">BillOfMaterials Table (AdventureWorks)</a></span></div><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124770(v=sql.100).aspx">ProductCostHistory Table (AdventureWorks)</a></span></div><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124729(v=sql.100).aspx">ProductDocument Table (AdventureWorks)</a></span></div><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124873(v=sql.100).aspx">ProductModel Table (AdventureWorks)</a></span></div><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124665(v=sql.100).aspx">ProductProductPhoto Table (AdventureWorks)</a></span></div><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124590(v=sql.100).aspx">ProductReview Table (AdventureWorks)</a></span></div><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124630(v=sql.100).aspx">ProductSubcategory Table (AdventureWorks)</a></span></div><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124907(v=sql.100).aspx">UnitMeasure Table (AdventureWorks)</a></span></div><h4 class="subHeading">Other Resources</h4><div class="seeAlsoStyle"><span><a href="https://technet.microsoft.com/en-us/library/ms124438(v=sql.100).aspx">AdventureWorks Data Dictionary</a></span></div></div></div></div>
+  </div>
+</div>
+
+
+
+
+
+<script id="CommentTemplate" type="text/x-jquery-tmpl">
+    <div class="communityContentAnnotation">
+        <a name="${Index}"></a>
+        <h3>
+            ${Title}
+        </h3>
+        <div class="communityContentAnnotationBody">
+            {{html Body}}
+        </div>
+        <div class="communityContentAnnotationInfo">
+            <div class="communityContentAnnotationAvatarContainer">
+                <a href="${UserAvatar.Href}" title="${UserAvatar.ToolTip}" class="communityContentAnnotationAvatar"><img src="${UserAvatar.ImageUrl}" alt="${UserAvatar.ImageAltText}" width="34" height="34" /></a>
+            </div>
+            <div class="communityContentAnnotationUserDateContainer">
+                <div class="communityContentAnnotationUserContainer">
+                    <a href="${UserAvatar.Href}">
+                        ${User}
+                    </a>
+                </div>
+                <div class="communityContentAnnotationDateContainer">
+                    <span>${Date}</span>
+                    
+                    {{if EditLink}}
+                        <span>
+                            <a href="${EditLink.Href}" title="${EditLink.ToolTip}" class="communityContentCommentEditLink">${EditLink.Title}</a>
+                        </span>
+                    {{/if}}
+
+                    {{if DeleteLink}}
+                        <span>
+                            <a href="${DeleteLink.Href}" title="${DeleteLink.ToolTip}" class="communityContentDeleteLink">${DeleteLink.Title}</a>
+                        </span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<div class="communityContentContainer" ms.cmpgrp="community">
+    <div id="CommunityContentHeader" class="communityContentHeader">
+        <div class="communityContentHeaderTitleContainer">
+            <h2>Community Additions</h2>
+                <a class="communityContentAddLink" href="https://technet.microsoft.com/en-us/library/community/add/ms124719(v=sql.100).aspx">
+                    <span class="communityContentAddButton" title="Add">
+                        ADD
+                    </span>
+                </a>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    
+    <div id="CommunityComments" data-url="/en-us/library/community/comments/ms124719(v=sql.100).aspx"></div>
+</div>
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>Show:</span>
+        <label>
+            <input type="checkbox" class="libraryFilterInherited" checked="checked" value="Inherit">Inherited
+        </label>
+        <label>
+            <input type="checkbox" class="libraryFilterProtected" checked="checked" value="Protected">Protected
+        </label>
+    </div>
+</div>
+    
+<input type="hidden" id="libraryMemberFilterEmptyWarning" value="There are no members available with your current filter settings.">
+
+
+
+    </div>
+<div id="rightNavigationMenu" ms.cmpgrp="right nav" style="position: fixed; margin-left: 3px; top: 60px;">
+    <div id="mobileButtons">
+        
+    </div>
+    <div id="navMain">
+        <div id="closeNavigation">
+            <a class="tocCloseSmall" id="closeButton"></a>
+        </div>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://technet.microsoft.com/en-us/library/ms124719(d=printer,v=sql.100).aspx" rel="nofollow"><ins class="print"></ins>Print </a>
+            <a id="isdShare" href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#" role="button" aria-expanded="false">
+                <ins class="share"></ins>Share
+            </a>
+            <div id="socials" style="display: none">
+                <a class="isdFacebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fms124719(v%3Dsql.100).aspx" aria-label="Share on Facebook">
+                    <ins class="facebook"></ins>
+                </a>
+                <a class="isdTwitter" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fms124719(v%3Dsql.100).aspx&amp;text=Product%20Table%20(AdventureWorks)&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fms124719(v%3Dsql.100).aspx" aria-label="Share on Twitter">
+                    <ins class="twitter"></ins>
+                </a>
+                <a class="isdGooglePlus" href="https://plus.google.com/share?url=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fms124719(v%3Dsql.100).aspx" aria-label="Share on Google+">
+                    <ins class="googlePlus"></ins>
+                </a>
+            </div>
+        </div>
+        <div id="indoc_toc" style="" ms.cmpgrp="indoc toc">
+            <div id="indoc_title">IN THIS ARTICLE</div>
+            <ul id="indoc_toclist"><li data-index="0" class="active"><a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#Product Table Definition">Product Table Definition</a></li><li data-index="1" class=""><a href="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx#See Also">See Also</a></li></ul>
+        </div>
+    </div>
+</div>
+<div id="rightNavigationMenuThumbnail" class="rightNavigationMenuThumbnail">
+</div>
+
+
+
+
+        </div>
+        <div class="clear"></div>
+
+        
+    
+
+<input name="__RequestVerificationToken" type="hidden" value="v_M8XBbfvBba8q8eXWGCeRUfMUE3q15r6ijAxi5qyg_ilrNUuW068u6lu-5BX_6pR_kTofLBqTTNPFWuPKzbLZokeL41">
+<input id="ratingValueSubmitUrl" type="hidden" value="https://technet.microsoft.com/en-us/library/feedback/rate/ms124719(v=sql.100).aspx">
+<input id="ratingAdditionalSubmitUrl" type="hidden" value="https://technet.microsoft.com/en-us/library/feedback/additional/ms124719(v=sql.100).aspx">
+<input id="isTopicRated" type="hidden" value="false">
+
+
+
+      <div id="lib-footer">
+
+
+    <div id="standardRatingBefore" class="clear stdr-container-before"></div>
+    <div id="standardRating" class="stdr-container stdr-float" ms.pgarea="body" style="width: 1519px; margin-left: 0px; display: block;">
+        <div class="stdr-close" style="display: block;"></div>
+        <div class="stdr-vote stdr-content">
+            <div class="stdr-content">
+                <span class="stdr-votetitle">Is this page helpful?</span>
+                <button class="stdr-yes" aria-label="Yes, this page was helpful">Yes</button>
+                <button class="stdr-no" aria-label="No, this page was not helpful">No</button>
+                <input id="s_ratingValue" type="hidden" value="">
+            </div>
+        </div>
+        <div class="stdr-feedback" style="display: none">
+            <div class="stdr-form">
+                <div class="stdr-fieldtitle">Additional feedback?</div>
+                <textarea class="stdr-detail" rows="6" maxlength="1500"></textarea>
+                <div>
+                    <span class="stdr-count"><span class="stdr-charcnt">1500</span> characters remaining</span>
+                    <div class="stdr-buttons">
+                        <button class="stdr-provide" aria-label="Submit my additional feedback">Submit</button>
+                        <button class="stdr-skip" aria-label="Skip additional feedback">Skip this</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="stdr-thanks" style="display: none">
+            <div class="stdr-content">
+                <span class="stdr-thankyou">Thank you!</span>
+                <span class="stdr-appreciate">We appreciate your feedback.</span>
+            </div>
+        </div>
+
+        
+        <div id="contentFeedbackQAContainer" style="display: none;"></div>
+    </div>
+    <div id="standardRatingPlaceholder" style="height: 60px;"></div>
+    
+        
+        
+    <div id="ux-footer" dir="ltr" class="ltr" role="contentinfo" ms.pgarea="footer">
+        <div class="ux-footer-clear"></div>
+        <div id="footerWrapper">
+            <div id="footerLeft">
+                <div id="footerProfileFeedback">
+                    <div id="footerProfileLink">
+                        <div data-fragmentname="ManageProfileLink" id="Fragment_ManageProfileLink" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://social.technet.microsoft.com/profile" xmlns="http://www.w3.org/1999/xhtml">Manage Your Profile</a>
+</div>
+                    </div>
+                    <div id="Feedback">
+                        <div class="feedbackListItem">
+                            <div class="divider">|</div>
+                            
+
+
+
+
+
+<div class="FooterSiteFeedBack">
+    <a id="SiteFeedbackLinkOpener" href="javascript:void(0)">
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+            <img id="feedBackImg" class="cl_footer_feedback_icon" src="./Product Table (AdventureWorks)_files/ImageSprite.png" alt="Site Feedback">
+        </span>
+        Site Feedback
+    </a>
+    
+    <div id="SiteFeedbackLinkContainer" class="SiteFeedbackLinkContainer" style="display: none">
+    <form id="siteFeedbackForm" method="post" action="https://technet.microsoft.com/en-us/library/feedback/add/ms124719(v=sql.100).aspx">
+        <div class="SiteFeedbackLinkTitleContainer">
+            <div class="SiteFeedbackLinkTitle">
+                Site Feedback
+            </div>
+            <div class="SiteFeedbackLinkCancel">
+                <a id="SiteFeedbackLinkCloser" role="button" aria-label="Close Site Feedback" href="javascript:void(0)">x</a>
+            </div>
+        </div>
+        <div class="SiteFeedbackLinkData">
+            <div class="SiteFeedbackLinkInfoText">
+                Tell us about your experience...
+            </div>
+            <div class="QuestionText">
+                Did the page load quickly?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input aria-label="Yes" id="searchBox" name="searchBox" type="radio" value="1"></span></span>
+                
+                <span>
+                    No<span>
+                        <input aria-label="No" id="searchBox" name="searchBox" type="radio" value="0"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Do you like the page design?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input aria-label="Yes" id="tabbedCode" name="tabbedCode" type="radio" value="1"></span></span>
+                
+                <span>
+                    No<span>
+                        <input aria-label="No" id="tabbedCode" name="tabbedCode" type="radio" value="0"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Tell us more
+            </div>
+            <div class="SiteFeedbackLinkTextAreaContainer">
+                <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="SiteFeedbackLinkTextArea" aria-label="Feedback Text"></textarea>
+                
+                <input type="hidden" id="feedbackSiteName" name="feedbackSiteName" value="">
+                <input type="hidden" id="feedbackPriority" name="feedbackPriority" value="">
+                <input type="hidden" id="feedbackSourceUrl" name="feedbackSourceUrl" value="">
+                <input type="hidden" id="ClientIP" name="ClientIP" value="">
+                <input type="hidden" id="ClientOS" name="ClientOS" value="">
+                <input type="hidden" id="ClientBrowser" name="ClientBrowser" value="">
+                <input type="hidden" id="ClientTime" name="ClientTime" value="">
+                <input type="hidden" id="ClientDate" name="ClientDate" value="">
+                
+            </div>
+            <div>
+                <input id="siteFeedbackSubmit" type="submit" value="Send" class="SiteFeedbackLinkSubmit" aria-label="Send">
+            </div>
+        </div>
+        <input type="hidden" id="returnUrl" name="returnUrl" value="https://technet.microsoft.com/en-us/library/ms124719(v=sql.100).aspx">
+    <input name="__RequestVerificationToken" type="hidden" value="ydGXbYWDX5F936PUKE4pCLTEv_FBCt_8Su0ywXf2gjtxhENOg_du0OTFS6bRZ1iWWmIuo2So5E88GFJ2ZVLJ1bqiqSg1"></form>
+</div>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="footerGroup">
+                    <div id="LinkGroup">
+                        <div id="Links1"><div data-fragmentname="FooterLinks" id="Fragment_FooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://technet.microsoft.com/cc543196.aspx" xmlns="http://www.w3.org/1999/xhtml">Flash Newsletter</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://technet.microsoft.com/cc512759.aspx" xmlns="http://www.w3.org/1999/xhtml">Contact Us</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://privacy.microsoft.com/privacystatement" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Privacy Statement</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://technet.microsoft.com/cc300389.aspx" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Terms of Use</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Trademarks</a>
+      </li>
+      <li class="divider">|</li>
+    </ul>
+  </div>
+</div></div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <div id="Links2"></div>
+            </div>
+            <div id="footerRight">
+                <div id="FooterLogoContainer"><div id="FooterLogo"></div></div>
+                <div id="FooterCopyright">© 2018 Microsoft</div>
+            </div>
+        </div>
+    </div>
+    
+
+      </div>
+
+        <div class="footerPrintView">
+            <div class="footerCopyrightPrintView">© 2018 Microsoft</div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+
+
+    <input id="tocPaddingPerLevel" type="hidden" value="17">
+
+
+
+        <input id="MtpsDevice" type="hidden" value="Default">
+
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+
+        
+        
+        
+            
+        
+
+<!--[CDATA[ WebTrends view model not available or IncludeLegacyWebTrendsScriptInGlobal feature flag is off]]-->
+        
+
+ 
+        
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="ydGXbYWDX5F936PUKE4pCLTEv_FBCt_8Su0ywXf2gjtxhENOg_du0OTFS6bRZ1iWWmIuo2So5E88GFJ2ZVLJ1bqiqSg1">
+</div>
+
+
+    </div>
+
+    
+        
+
+    
+
+    
+<script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"https://i-technet.sec.s-msft.com\", \r\n\t\"js\": \"https://i2-technet.sec.s-msft.com\", \r\n\t\"css\": \"https://i-technet.sec.s-msft.com\", \r\n\t\"ttf\": \"https://i-technet.sec.s-msft.com\"\r\n});\r\n/**/" },
+	{ txt: "//\n\n        window.appInsightsId = \u0027c48d7639-e2ae-45e0-b536-c9b172c95e44\u0027;\n        //" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:Utilities,1:Breadcrumbs,2:LibraryRightNavigationMenu,2:PrintExportButton,3:StandardRating,4:Footer,0:Topic,1:ResponsiveSupport,1:ArchiveDisclaimer,5:JSLLRecord,0:AppInsightsPerf,1:ResponsiveToc,0:ABTestControl,2:WEDCS;/Areas/Epx/Content/Scripts:0,/Areas/Library/Content:1,/Areas/Library/Themes/Base/Content:2,/Areas/Global/Content:3,/Areas/Epx/Themes/TechNet/Content:4,/Areas/Centers/Themes/Base/Content:5\u0026amp;hashKey=3750B344FC6FB6A1E8882978940DEDA9\u0026amp;v=F46F073C9A9E2C2C6A15F82A1FD2B1F8" },
+	{ url: "https://uhf.microsoft.com/mscc/statics/mscc-0.3.7.min.js" },
+	{ txt: "var omnitureTracking = \"false\";" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:megabladeMenu.1,1:SearchBox;/Areas/Epx/Themes/Shared/Content:0,/Areas/Epx/Themes/Base/Content:1\u0026amp;hashKey=F6DE63F37E6BFBE8E78C84CFE28A5B67\u0026amp;v=F46F073C9A9E2C2C6A15F82A1FD2B1F8" },
+	{ url: "https://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026brand=TechNet\u0026loc=en-us\u0026watermark=TechNet\u0026focusOnInit=false" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:JumpRedirect,1:Header.2;/Areas/Epx/Themes/Base/Content:0,/Areas/Epx/Themes/TechNet/Content:1\u0026amp;hashKey=6BEF94D681BADBDC25ABE184A5312ADD\u0026amp;v=F46F073C9A9E2C2C6A15F82A1FD2B1F8" },
+	{ txt: "MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = \u0027Expand\u0027; MTPS.LocalizedStrings.CollapseButtonTooltip = \u0027Collapse\u0027; MTPS.LocalizedStrings.EnhancedExpandTooltip = \u0027Click to expand. Double-click to expand all.\u0027; MTPS.LocalizedStrings.EnhancedCollapseTooltip = \u0027Click to collapse. Double-click to collapse all.\u0027; MTPS.LocalizedStrings.ExpandAllButtonTooltip = \u0027Expand All\u0027; MTPS.LocalizedStrings.CollapseAllButtonTooltip = \u0027Collapse All\u0027;" },
+	{ url: "https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" },
+	{ url: "https://i2-technet.sec.s-msft.com/Combined.js?resources=0:CommunityContent,0:LibraryMemberFilter,1:SiteFeedbackLink,1:Toc_Fixed,1:CodeSnippet,1:TopicNotInScope,1:VersionSelector,1:SurveyBroker;/Areas/Library/Content:0,/Areas/Epx/Content/Scripts:1\u0026amp;hashKey=7C21BB6F30C5EE8091BA0695F9E8BF21\u0026amp;v=F46F073C9A9E2C2C6A15F82A1FD2B1F8" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script>
+
+<script src="./Product Table (AdventureWorks)_files/broker-config.js.download"></script></body></html>
